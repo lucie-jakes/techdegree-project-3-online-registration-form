@@ -50,23 +50,20 @@
         <fieldset>
             <legend>Newsletter</legend>
             <label>Select the newsletters you would like to receive </label><br>
-                <input type="checkbox" id="html" value="newsletter_html" name="user_newsletter"><label for="html">HTML News</label><br>
-                <input type="checkbox" id="css" value="newsletter_css" name="user_newsletter"><label for="css">CSS News</label><br>
-                <input type="checkbox" id="javascript" value="newsletter_javascript" name="user_newsletter"><label for="javascript">JavaScript News</label><br>
+                <input type="checkbox" id="html" value="newsletter_html" name="user_newsletter"><label class="inline-label" for="html">HTML News</label><br>
+                <input type="checkbox" id="css" value="newsletter_css" name="user_newsletter"><label class="inline-label" for="css">CSS News</label><br>
+                <input type="checkbox" id="javascript" value="newsletter_javascript" name="user_newsletter"><label class="inline-label" for="javascript">JavaScript News</label><br>
            
             <label>Newsletter format</label><br>
-                <input type="radio" id="html-format" value="html-format" name="newsletter_format"><label for="html-format">HTML</label><br>
-                <input type="radio" id="plain-text" value="plain-text" name="newsletter-format"><label for="plain-text">Plain text</label><br>
+                <input type="radio" id="html-format" value="html-format" name="newsletter_format"><label class="inline-label" for="html-format">HTML</label><br>
+                <input type="radio" id="plain-text" value="plain-text" name="newsletter-format"><label class="inline-label" for="plain-text">Plain text</label><br>
             <label for="other">Other topics you'd like to hear about</label>
             <textarea id="other" name="user_other" placeholder="Tell us more!"></textarea>
         </fieldset>
 
-
-
+        <button type="submit">Sign Up</button>
 
     </form>
-
-    <button type="submit">Sign Up</button>
     
     <footer class="main-footer">
         <p>Copyright The Code Review</p>
