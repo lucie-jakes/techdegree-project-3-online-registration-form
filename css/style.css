@@ -1,7 +1,6 @@
 /* ================================= 
   Base Element Styles
 ==================================== */
-/* #52bab3 */
 
 * {
     box-sizing: border-box;
@@ -75,7 +74,7 @@ label {
 
 label.inline-label {
   display: inline;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 button {
@@ -91,11 +90,6 @@ button {
   background-color: #45c27d;
 }
 
-/* label {
-  display: block;
-  margin-bottom: 4px;
-} */
-
 
 .intro {
   font-size: 0.85em;
@@ -108,27 +102,27 @@ button {
 }
 
 .line {
-  background-color: #000;
+  background-color: #05386b;
 }
 
 .thick-line {
   height: 3px;
-  width: 90%;
+  width: 94%;
   margin: 1px 10px;
 }
 
 .thin-line {
   height: 2px;
-  width: 90%;
+  width: 94%;
   margin: 4px 10px 15px 10px;
 }
 
-
+#zip {
+  width: 50%;
+}
 /* ================================= 
   Base Layout Styles
 ==================================== */
-
-/* ---- Navigation ---- */
 
 /* ---- Layout Containers ---- */
 
@@ -167,6 +161,12 @@ button {
 /* ================================= 
   Pseudo-classes and Pseudo-elements
 ==================================== */
+
+input:focus,
+textarea:focus {
+  border: 1px solid #379683;
+}
+
 ::placeholder {
   font-size: 0.75em;
   font-style: italic;
@@ -175,12 +175,12 @@ button {
 }
 
 input:required {
-  border: 1px solid red;
+  border: 2px solid #05386b;
 }
 
 input[name^="user_name"]:not(:focus):valid,
 input[name^="user_email"]:not(:focus):valid {
-  border: 1px solid red;
+  border: 2px solid #05386b;
 }
 
 input[name^="user_name"]:not(:focus):invalid,
@@ -189,10 +189,60 @@ input[name^="user_email"]:not(:focus):invalid
   border: none;
 }
 
+button:hover {
+  background-color: #379683;
+  transition: background-color .5s ease;
+}
 /* ================================= 
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
 
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 580px;
+  }
+
+  .flexcont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 580px;
+    margin: 15px auto;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select[name^="user_state"] {
+    width: 70%;
+  }
+
+  #zip {
+    margin-right: 205px;
+    width: 30%;
+  }
+  form {
+    max-width: 580px;
+  }
+
+  .main-header {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .thick-line {
+    width: 96%;
+  }
+
+  .thin-line {
+    width: 96%;
+  }
+
+  button {
+    width: 96%;
+  }
 }
